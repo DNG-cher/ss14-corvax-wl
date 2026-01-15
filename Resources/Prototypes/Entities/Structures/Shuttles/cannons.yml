@@ -26,6 +26,8 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 0
     baseSprintSpeed: 0
+  - type: Physics
+    bodyType: KinematicController
 # WL-Changes-end
   - type: ContainerContainer
   - type: Gun
