@@ -2,38 +2,16 @@
 
 - type: entity
   id: ShuttleGunBase
-  parent: [BaseStructure, BaseMob]
+  parent: BaseStructure
   name: shittle gun
   abstract: true
-  save: true #WL-Changes : Radar Markers
   components:
   - type: Appearance
   - type: InteractionOutline
   - type: Anchorable
   - type: Rotatable
-# WL-Changes-start
-  - type: CombatMode
-    toggleMouseRotator: false
-    canDisarm: false
-  - type: MouseRotator
-    angleTolerance: 5
-    simple4DirMode: false
-    rotationSpeed: 60
-  - type: BuckleableTurret
-    exitAction: TurretExitStateAction
-  - type: Sprite
-    noRot: false
-  - type: MovementSpeedModifier
-    baseWalkSpeed: 0
-    baseSprintSpeed: 0
-  - type: Physics
-    bodyType: Static
-# WL-Changes-end
   - type: ContainerContainer
   - type: Gun
-    #WL-Changes-start
-    fireRate: 1.5
-    #WL-Changes-end
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
@@ -67,10 +45,6 @@
   description: Basic stationary laser unit. Effective against live targets and electronics. Uses regular power cells to fire, and has an extremely high rate of fire.
   categories: [ DoNotMap ]
   components:
-  #WL-Changes-start
-  - type: MouseRotator
-    rotationSpeed: 130
-  #WL-Changes-end
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shuttles/laser.rsi
     layers:
@@ -189,10 +163,6 @@
   description: A small stationary grenade launcher that holds 2 grenades.
   categories: [ DoNotMap ]
   components:
-  #WL-Changes-start
-  - type: MouseRotator
-    rotationSpeed: 100
-  #WL-Changes-end
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shuttles/launcher.rsi
     layers:
@@ -247,10 +217,6 @@
   description: A powerful stationary grenade launcher. A cartridge is required for use.
   categories: [ DoNotMap ]
   components:
-  #WL-Changes-start
-  - type: MouseRotator
-    rotationSpeed: 60
-  #WL-Changes-end
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shuttles/launcher.rsi
     layers:
@@ -349,10 +315,6 @@
   description: Salvage stationary mining turret. Gradually accumulates charges on its own, extremely effective for asteroid excavation.
   categories: [ DoNotMap ]
   components:
-  #WL-Changes-start
-  - type: MouseRotator
-    rotationSpeed: 150
-  #WL-Changes-end
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shuttles/kinetic.rsi
     layers:
