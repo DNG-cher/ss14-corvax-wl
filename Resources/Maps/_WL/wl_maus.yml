@@ -3,9 +3,9 @@ meta:
   category: Map
   engineVersion: 270.1.0
   forkId: syndicate-wl
-  forkVersion: e9f74b0ccf87ab27319eb1a3cd938c10663255cd
-  time: 02/15/2026 12:55:30
-  entityCount: 21492
+  forkVersion: 05f1ef8a796f15c8c07070a0ac3d613dbc745109
+  time: 02/20/2026 14:24:03
+  entityCount: 21491
 maps:
 - 1
 grids:
@@ -2997,6 +2997,13 @@ entities:
             6652: -43,-36
             8449: -66,-37
         - node:
+            color: '#4B709CFF'
+            id: BrickTileWhiteLineE
+          decals:
+            10418: -31,-3
+            10419: -31,-4
+            10420: -31,-5
+        - node:
             color: '#69EDD693'
             id: BrickTileWhiteLineE
           decals:
@@ -3154,6 +3161,8 @@ entities:
             281: -34,-7
             282: -33,-7
             283: -32,-7
+            10417: -30,-3
+            10426: -41,-3
         - node:
             color: '#6ACDA9FF'
             id: BrickTileWhiteLineN
@@ -3330,6 +3339,11 @@ entities:
             284: -34,-8
             285: -33,-8
             286: -32,-8
+            10421: -36,0
+            10422: -35,0
+            10423: -34,0
+            10424: -33,0
+            10425: -32,0
         - node:
             color: '#6ACDA9FF'
             id: BrickTileWhiteLineS
@@ -3507,6 +3521,13 @@ entities:
             id: BrickTileWhiteLineW
           decals:
             4110: -77.891,-75.32222
+        - node:
+            color: '#4B709CFF'
+            id: BrickTileWhiteLineW
+          decals:
+            10427: -40,-3
+            10428: -40,-4
+            10429: -40,-5
         - node:
             color: '#69EDD693'
             id: BrickTileWhiteLineW
@@ -11418,9 +11439,11 @@ entities:
           -4,-10:
             0: 6007
           -5,-10:
-            0: 16299
+            0: 16297
+            6: 2
           -5,-9:
-            0: 62395
+            0: 62387
+            6: 8
           -3,-12:
             0: 4095
           -3,-11:
@@ -12007,11 +12030,11 @@ entities:
             0: 65535
           -8,-11:
             0: 238
-            6: 49152
+            7: 49152
           -9,-11:
             0: 12272
           -8,-10:
-            6: 3822
+            7: 3822
             0: 16384
           -9,-10:
             0: 58615
@@ -12032,7 +12055,8 @@ entities:
           -6,-11:
             0: 61676
           -6,-10:
-            0: 65293
+            0: 65289
+            8: 4
           -6,-9:
             0: 65535
           -6,-8:
@@ -12565,10 +12589,20 @@ entities:
           moles:
             Plasma: 6666.982
         - volume: 2500
+          temperature: 293.15
+          moles:
+            Oxygen: 21.6852
+            Nitrogen: 81.57766
+        - volume: 2500
           temperature: 235
           moles:
             Oxygen: 27.225372
             Nitrogen: 102.419266
+        - volume: 2500
+          temperature: 293.14975
+          moles:
+            Oxygen: 20.078888
+            Nitrogen: 75.53487
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
@@ -18969,7 +19003,7 @@ entities:
       pos: -10.5,3.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -140602.23
+      secondsUntilStateChange: -140884.84
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18991,7 +19025,7 @@ entities:
       pos: -27.5,1.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -116788.664
+      secondsUntilStateChange: -117071.28
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -19593,7 +19627,7 @@ entities:
       pos: -89.5,-39.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -3436.6182
+      secondsUntilStateChange: -3719.234
       state: Opening
     - type: DeviceLinkSink
       invokeCounter: 1
@@ -19778,7 +19812,7 @@ entities:
       pos: -0.5,0.5
       parent: 20522
     - type: Door
-      secondsUntilStateChange: -44941.1
+      secondsUntilStateChange: -45223.72
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -20012,7 +20046,7 @@ entities:
       pos: -27.5,-45.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -20360.467
+      secondsUntilStateChange: -20643.082
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -20434,7 +20468,7 @@ entities:
       pos: -14.5,-35.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -41341.438
+      secondsUntilStateChange: -41624.055
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -20827,6 +20861,12 @@ entities:
     - type: Transform
       pos: -22.5,-40.5
       parent: 2
+    - type: Door
+      secondsUntilStateChange: -230.06032
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
   - uid: 456
     components:
     - type: Transform
@@ -56736,19 +56776,18 @@ entities:
         immutable: False
         temperature: 293.14673
         moles:
-          Oxygen: 1.7459903
-          Nitrogen: 6.568249
+          Oxygen: 1.8856695
+          Nitrogen: 7.0937095
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
           showEnts: False
           occludes: True
           ents:
-          - 6524
-          - 6525
-          - 6527
           - 6528
-          - 6526
+          - 6527
+          - 6525
+          - 6524
     - type: Fixtures
       fixtures: {}
 - proto: ClosetWallGrey
@@ -58405,6 +58444,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 6523
   - uid: 6594
     components:
     - type: Transform
@@ -58541,6 +58581,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 6523
   - uid: 6786
     components:
     - type: Transform
@@ -58604,15 +58645,6 @@ entities:
     - type: Transform
       pos: -19.693851,-26.231579
       parent: 2
-- proto: ClothingShoesSnakeskinBoots
-  entities:
-  - uid: 6526
-    components:
-    - type: Transform
-      parent: 6523
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingShoesTourist
   entities:
   - uid: 6801
@@ -58728,6 +58760,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 6523
 - proto: ClothingUniformJumpskirtOfLife
   entities:
   - uid: 26
@@ -58978,6 +59011,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 6523
 - proto: ClothingUniformJumpsuitNanotrasen
   entities:
   - uid: 6831
@@ -60506,6 +60540,14 @@ entities:
     - type: Transform
       pos: -21.5,-39.5
       parent: 2
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+          Oxygen: 1.7459903
+          Nitrogen: 6.568249
 - proto: CrateFunToyBox
   entities:
   - uid: 7026
@@ -60519,8 +60561,8 @@ entities:
         immutable: False
         temperature: 293.14673
         moles:
-          Oxygen: 1.7459903
-          Nitrogen: 6.568249
+          Oxygen: 1.8856695
+          Nitrogen: 7.0937095
 - proto: CrateGenericSteel
   entities:
   - uid: 135
@@ -66284,7 +66326,7 @@ entities:
       tags:
       - DrinkBottle
     - type: PressurizedSolution
-      sprayFizzinessThresholdRoll: 0.3301762
+      sprayFizzinessThresholdRoll: 0.22441816
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -68989,7 +69031,7 @@ entities:
       pos: -51.5,-22.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -804.2145
+      secondsUntilStateChange: -1086.8302
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -104512,7 +104554,7 @@ entities:
       pos: -13.5,-37.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -41334.402
+      secondsUntilStateChange: -41617.02
       state: Closing
   - uid: 11619
     components:
@@ -104575,7 +104617,7 @@ entities:
       pos: -11.5,-45.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -120505.734
+      secondsUntilStateChange: -120788.35
       state: Closing
   - uid: 11633
     components:
