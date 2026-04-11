@@ -116,11 +116,11 @@
             inherent: true
           protos:
           - VGRoid
-        # Corvax-Mapping-Start
+        # Corvax-Mapping-Start. Corvax-WL-Mapping edit
         mining: !type:GridSpawnGroup
           paths:
-          - /Maps/Corvax/Shuttles/Venture.yml
-        # Corvax-Mapping-End
+          - /Maps/_WL/Shuttles/Venture.yml
+        # Corvax-Mapping-End. Corvax-WL-Mapping edit
 
 - type: entity
   id: BaseStationCentcomm
