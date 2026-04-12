@@ -33,6 +33,7 @@ public sealed partial class DynamicTextWindow : FancyWindow
 
     private void OnClose(BaseButton.ButtonEventArgs obj)
     {
-        Close();
+        base.Closed();
+        SendMessage(new CloseEuiMessage());
     }
 }

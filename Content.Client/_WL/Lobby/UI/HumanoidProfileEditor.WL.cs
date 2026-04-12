@@ -35,9 +35,6 @@ public sealed partial class HumanoidProfileEditor
 
     private TextEdit _oocTextEdit = null!; // WL-OOCText
 
-    private Marking? _underwearMarking; // WL-Underwear
-    private Marking? _undershirtMarking; // WL-Underwear
-
     private List<ConfederationRecordsPrototype> _confederations = new(); // WL-Recordss
 
     public void RefreshSkills()

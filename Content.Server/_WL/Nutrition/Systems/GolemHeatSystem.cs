@@ -16,7 +16,6 @@ public sealed class GolemHeatSystem : EntitySystem
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly IEntitySystemManager _systemManager = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _movement = default!;
-    [Dependency] private readonly BodySystem _bodySystem = default!;
 
     private const int HeatChangeAmount = 4000;
     private const float SprintSpeed = 3.24f;

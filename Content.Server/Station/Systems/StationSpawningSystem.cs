@@ -39,7 +39,6 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
     [Dependency] private readonly SharedAccessSystem _accessSystem = default!;
     [Dependency] private readonly ActorSystem _actors = default!;
     [Dependency] private readonly IdCardSystem _cardSystem = default!;
-    [Dependency] private readonly IConfigurationManager _configurationManager = default!;
     [Dependency] private readonly HumanoidProfileSystem _humanoidProfile = default!;
     [Dependency] private readonly SharedVisualBodySystem _visualBody = default!;
     [Dependency] private readonly IdentitySystem _identity = default!;

@@ -25,9 +25,7 @@ namespace Content.Server.Corvax.StationGoal
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly FaxSystem _fax = default!;
         [Dependency] private readonly NewsSystem _news = default!;
-        [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly StationSystem _station = default!;
-        [Dependency] private readonly IConfigurationManager _cfg = default!;
 
         private static readonly Regex StationIdRegex = new(@".*\s(\w+-\w+)$"); //WL - Changes
 
@@ -76,7 +74,7 @@ namespace Content.Server.Corvax.StationGoal
         /// <returns>True if at least one fax received paper</returns>
         public bool SendStationGoal(StationGoalPrototype goal)
         {
-            var enumerator = EntityManager.EntityQueryEnumerator<FaxMachineComponent>();
+            var enumerator = EntityQueryEnumerator<FaxMachineComponent>();
             var wasSent = false;
             while (enumerator.MoveNext(out var uid, out var fax))
             {

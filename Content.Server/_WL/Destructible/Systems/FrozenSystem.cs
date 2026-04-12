@@ -15,7 +15,6 @@ namespace Content.Server._WL.Destructible.Systems
     public sealed partial class FrozenSystem : EntitySystem
     {
         [Dependency] private readonly MetaDataSystem _metaData = default!;
-        [Dependency] private readonly HumanoidProfileSystem _profile = default!;
 
         public override void Initialize()
         {
