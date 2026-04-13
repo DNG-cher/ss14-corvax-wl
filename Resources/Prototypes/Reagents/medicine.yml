@@ -79,8 +79,6 @@
           reagent: Dylovene
           min: 15
 # WL Cischi species start
-    Cischi:
-      effects:
       - !type:Jitter
       - !type:AdjustTemperature
         amount: 1
@@ -196,19 +194,26 @@
         - !type:MetabolizerTypeCondition
           type: [ Biorobotic, Golem, Cischi ]
           inverted: true
-    Cischi:
-      effects:
       - !type:HealthChange
         damage:
           types:
             Radiation: -3
           groups:
             Brute: 0.5
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
       - !type:AdjustReagent
         reagent: Histamine
         amount: 0.25
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
       - !type:Vomit
         probability: 0.1
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
 # WL species end
 
 - type: reagent
@@ -258,14 +263,18 @@
           min: 15
       - !type:Drunk
 # WL Cischi species
-    Cischi:
-      effects:
       - !type:Emote
         emote: Laugh
         showInChat: false
         probability: 0.50
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
       - !type:Drunk
         boozePower: 10 #2 # WL-Changes
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
 
 - type: reagent
   id: Cryoxadone
@@ -370,14 +379,14 @@
           reagent: Dermaline
           min: 10
 # WL Cischi species
-    Cischi:
-      effects:
       - !type:HealthChange
         damage:
           types:
             Poison: -1
-          groups:
-            Burn: -2
+          Burn: -2
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
+          inverted: true
 
 - type: reagent
   id: Dexalin
@@ -547,14 +556,15 @@
         time: 0.75
         type: Remove
       # WL Cischi species start
-    Cischi:
-      effects:
       - !type:AdjustTemperature
         amount: -10
         conditions:
         - !type:ReagentCondition
           reagent: Epinephrine
           min: 20
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
+          inverted: true
       - !type:MovementSpeedModifier
         walkSpeedModifier: 0.5
         sprintSpeedModifier: 0.5
@@ -571,6 +581,10 @@
         key: Adrenaline # Guess what epinephrine is...
         component: IgnoreSlowOnDamage
         time: 5 # lingers less than hivemind reagent to give it a niche
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
+          inverted: true
 
 - type: reagent
   id: Hyronalin
@@ -625,17 +639,20 @@
           inverted: true
 # WL species end
 # WL Cischi species
-    Cischi:
-      effects:
       - !type:HealthChange
         damage:
           types:
             Radiation: -1
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
           reagent: Hyronalin
           min: 30
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
         damage:
           types:
             Heat: 2
@@ -644,6 +661,8 @@
         - !type:ReagentCondition
           reagent: Hyronalin
           min: 30
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
 
 - type: reagent
   id: Ipecac
@@ -670,14 +689,17 @@
           min: 4
         probability: 0.3
 # WL Cischi species
-    Cischi:
-      effects:
       - !type:Jitter
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
           reagent: Ipecac
           min: 10
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
         damage:
           types:
             Poison: -4
@@ -716,14 +738,18 @@
           type: [ Biorobotic, Golem ]
           inverted: true
 # WL species end
-    Cischi:
-      effects:
       - !type:Emote
         emote: Laugh
         showInChat: false
         probability: 0.50
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
       - !type:Drunk
         boozePower: 2
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
 
 - type: reagent
   id: Kelotane
@@ -771,16 +797,16 @@
           inverted: true
 # WL android species end
 # WL Cischi species
-    Cischi:
-      effects:
       - !type:HealthChange
         damage:
           types:
             Heat: -0.33
             Shock: -0.33
             Cold: -0.33
-          groups:
-            Toxin: -1
+          Toxin: -1
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
 
 - type: reagent
   id: Leporazine
@@ -835,15 +861,11 @@
         reagent: Fresium
         amount: -5
 # WL Cischi species
-    Cischi:
-      effects:
       - !type:HealthChange
         damage:
           types:
             Bloodloss: -8
 # WL golem species start
-    Golem:
-      effects:
       - !type:AdjustTemperature
         conditions:
         - !type:TemperatureCondition
@@ -1130,8 +1152,6 @@
           inverted: true
 # WL species end
 # WL Cischi species
-    Cischi:
-      effects:
       - !type:HealthChange
         damage:
           types:
@@ -1139,6 +1159,9 @@
             Heat: -2
             Shock: -2
             Cold: -2
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
 
 - type: reagent
   id: Stellibinin
@@ -1172,13 +1195,17 @@
         reagent: Amatoxin
         amount: -3
 # WL Cischi species
-    Cischi:
-      effects:
       - !type:AdjustReagent
         reagent: Histamine
         amount: 0.5
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
       - !type:Vomit
         probability: 0.3
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
 
 - type: reagent
   id: Synaptizine
@@ -1271,22 +1298,29 @@
             Caustic: 3
 # WL android species end
 # WL Cischi species
-    Cischi:
-      effects:
       - !type:GenericStatusEffect
         key: SeeingRainbows
         component: SeeingRainbows
         type: Add
         time: 10
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
       - !type:PopupMessage
         visualType: Medium
         messages: ["������ �� ������� ����� �������...", "�� ������ ����������"]
         type: Pvs
         probability: 0.05
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
       - !type:Emote
         emote: Laugh
         showInChat: false
         probability: 0.30
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
 
 - type: reagent
   id: Tricordrazine
@@ -1441,14 +1475,14 @@
         reagent: Ultravasculine
         amount: 0.5
 # WL Cischi species
-    Cischi:
-      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
           reagent: Ultravasculine
           min: 0
           max: 30
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
         damage:
           types:
             Radiation: -2
@@ -1460,9 +1494,10 @@
         - !type:ReagentCondition
           reagent: Ultravasculine
           min: 30
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
         damage:
-          groups:
-            Brute: 3
+          Brute: 3
 
 - type: reagent
   id: Oculine
@@ -1624,37 +1659,42 @@
         messages: [ "generic-reagent-effect-nauseous" ]
         probability: 0.2
 # WL Cischi species
-    Cischi:
-      effects:
       - !type:HealthChange
         damage:
           types:
             Caustic: -3
             Heat: 1
-          groups:
-            Brute: 1
-            Toxin: 1
+          Brute: 1
+          Toxin: 1
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
           reagent: Sigynate
           min: 16
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
         damage:
           types:
             Heat: 2
-          groups:
-            Brute: 2
-            Toxin: 2
+          Brute: 2
+          Toxin: 2
       - !type:Jitter
         conditions:
         - !type:ReagentCondition
           reagent: Sigynate
           min: 20
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
       - !type:PopupMessage
         conditions:
         - !type:ReagentCondition
           reagent: Sigynate
           min: 20
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
         type: Local
         visualType: Medium
         messages: [ "generic-reagent-effect-nauseous" ]
@@ -1664,6 +1704,8 @@
         - !type:ReagentCondition
           reagent: Sigynate
           min: 30
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
         probability: 0.02
 
 - type: reagent
@@ -1704,14 +1746,18 @@
           types:
             Cold: 1.5 # 6 per u
 # WL Cischi species
-    Cischi:
-      effects:
       - !type:Emote
         emote: Laugh
         showInChat: false
         probability: 0.30
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
       - !type:Drunk
         boozePower: 2
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
 
 - type: reagent
   id: Puncturase
@@ -1751,14 +1797,18 @@
           types:
             Blunt: 3 # 12 per u
 # WL Cischi species
-    Cischi:
-      effects:
       - !type:Emote
         emote: Laugh
         showInChat: false
         probability: 0.30
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
       - !type:Drunk
         boozePower: 2
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Cischi ]
 
 - type: reagent
   id: Bruizine
@@ -1799,8 +1849,6 @@
           types:
             Poison: 2.5 # 10 per u
 # WL Cischi species
-    Cischi:
-      effects:
       - !type:Emote
         emote: Laugh
         showInChat: false
@@ -2048,8 +2096,6 @@
 # WL species end
         damage:
           Burn: -4.5
-    Golem:
-      effects:
       - !type:HealthChange
         conditions:
         - !type:TemperatureCondition

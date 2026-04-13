@@ -108,9 +108,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.1
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -130,9 +132,6 @@
           reagent: BlueCuracao
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.1
 
 - type: reagent
   id: Cognac
@@ -150,9 +149,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.4
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -172,9 +173,6 @@
           reagent: Cognac
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.4
 
 - type: reagent
   id: DeadRum
@@ -191,9 +189,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.4
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -213,9 +213,6 @@
           reagent: DeadRum
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.4
 
 - type: reagent
   id: Ethanol
@@ -227,7 +224,7 @@
   boilingPoint: 78.2
   meltingPoint: -114.1
   metabolisms:
-    Alcohol:
+    Metabolites:
       metabolismRate: 0.05
       effects:
       - !type:HealthChange
@@ -306,8 +303,6 @@
         - !type:ReagentCondition
           reagent: Ethanol
           min: 10
-    Food:
-      effects:
       - !type:SatiateHunger
         conditions:
         - !type:MetabolizerTypeCondition
@@ -330,9 +325,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.4
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -352,9 +349,6 @@
           reagent: Gin
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.4
 
 - type: reagent
   id: CoffeeLiqueur
@@ -467,9 +461,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.4
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -489,9 +485,6 @@
           reagent: Rum
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.4
 
 - type: reagent
   id: Sake
@@ -527,9 +520,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.4
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -549,9 +544,6 @@
           reagent: Tequila
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.4
 
 - type: reagent
   id: Vermouth
@@ -584,9 +576,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.4
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -606,9 +600,6 @@
           reagent: Vodka
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.4
 
 - type: reagent
   id: Whiskey
@@ -626,9 +617,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.4
 # WL android species start
+      effects:
         - !type:HealthChange
           conditions:
           - !type:ReagentCondition
@@ -648,9 +641,6 @@
             reagent: Whiskey
             min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.4
 
 - type: reagent
   id: Wine
@@ -825,9 +815,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.3
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -847,9 +839,7 @@
           reagent: Antifreeze
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.3
+
 - type: reagent
   id: AtomicBomb
   name: reagent-name-atomic-bomb
@@ -864,9 +854,12 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.3
+        Uranium: 0.1
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -886,10 +879,6 @@
           reagent: AtomicBomb
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.3
-        Uranium: 0.1
 
 - type: reagent
   id: B52
@@ -906,9 +895,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.3
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -928,9 +919,7 @@
           reagent: B52
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.3
+
 - type: reagent
   id: BahamaMama
   name: reagent-name-bahama-mama
@@ -990,9 +979,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.3
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -1012,9 +1003,6 @@
           reagent: BeepskySmash
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.3
   fizziness: 0.3
 
 - type: reagent
@@ -1032,9 +1020,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.4
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -1054,9 +1044,6 @@
           reagent: BlackRussian
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.4
 
 - type: reagent
   id: BloodyMary
@@ -1103,9 +1090,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.4
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -1125,9 +1114,6 @@
           reagent: BraveBull
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.4
 
 - type: reagent
   id: Bronx
@@ -1212,9 +1198,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.14
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -1234,9 +1222,6 @@
           reagent: CubaLibre
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.14
   fizziness: 0.2
 
 - type: reagent
@@ -1356,9 +1341,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.3
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -1378,9 +1365,7 @@
           reagent: DriestMartini
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.3
+
 - type: reagent
   id: Eggnog
   name: reagent-name-eggnog
@@ -1441,9 +1426,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.4
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -1463,9 +1450,7 @@
           reagent: GargleBlaster
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.4
+
 - type: reagent
   id: GinFizz
   name: reagent-name-gin-fizz
@@ -1480,9 +1465,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.14
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -1502,9 +1489,6 @@
           reagent: GinFizz
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.14
 
 - type: reagent
   id: GinTonic
@@ -1521,9 +1505,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.14
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -1543,9 +1529,6 @@
           reagent: GinTonic
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.14
 
 - type: reagent
   id: Gildlager
@@ -1562,9 +1545,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.4
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -1584,9 +1569,6 @@
           reagent: Gildlager
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.4
 
 - type: reagent
   id: Grog
@@ -1657,9 +1639,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.3
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -1679,9 +1663,6 @@
           reagent: IrishSlammer
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.3
 
 - type: reagent
   id: IrishCream
@@ -1697,9 +1678,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.4
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -1719,9 +1702,6 @@
           reagent: IrishCream
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.4
 
 - type: reagent
   id: IrishCoffee
@@ -1737,9 +1717,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.3
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -1759,9 +1741,6 @@
           reagent: IrishCoffee
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.3
 
 - type: reagent
   id: JackRose
@@ -1822,9 +1801,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.3
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -1844,9 +1825,6 @@
           reagent: LongIslandIcedTea
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.3
 
 - type: reagent
   id: Manhattan
@@ -1924,9 +1902,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.3
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -1946,9 +1926,6 @@
           reagent: Martini
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.3
 
 - type: reagent
   id: Mead
@@ -2011,9 +1988,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.5
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -2033,9 +2012,6 @@
           reagent: Moonshine
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.5
 
 - type: reagent
   id: Neurotoxin
@@ -2077,8 +2053,6 @@
           reagent: Neurotoxin
           min: 10
 # WL android species end
-    Poison:
-      effects:
       - !type:HealthChange
         damage:
           types:
@@ -2118,9 +2092,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.4
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -2140,9 +2116,6 @@
           reagent: Patron
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.4
 
 - type: reagent
   id: RedMead
@@ -2226,9 +2199,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.14
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -2248,9 +2223,6 @@
           reagent: ScrewdriverCocktail
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.14
 
 - type: reagent
   id: CogChamp
@@ -2377,9 +2349,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.3
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -2399,9 +2373,6 @@
           reagent: TequilaSunrise
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.3
 
 - type: reagent
   id: TheMartinez
@@ -2434,9 +2405,12 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.3
+        Uranium: 0.1
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -2459,10 +2433,6 @@
       - !type:AdjustReagent
         reagent: Uranium
         amount: 0.05
-    Digestion:
-      metabolites:
-        Ethanol: 0.3
-        Uranium: 0.1
 
 - type: reagent
   id: ToxinsSpecial
@@ -2509,9 +2479,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.3
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -2531,9 +2503,6 @@
           reagent: VodkaMartini
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.3
 
 - type: reagent
   id: VodkaTonic
@@ -2550,9 +2519,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.14
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -2572,9 +2543,6 @@
           reagent: VodkaTonic
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.14
 
 - type: reagent
   id: WhiskeyCola
@@ -2591,9 +2559,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.14
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -2613,9 +2583,6 @@
           reagent: WhiskeyCola
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.14
   fizziness: 0.3
 
 - type: reagent
@@ -2633,9 +2600,12 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+# WL android species end
+    Digestion:
+      metabolites:
+        Ethanol: 0.14
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -2654,10 +2624,6 @@
         - !type:ReagentCondition
           reagent: WhiskeySoda
           min: 10
-# WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.14
   fizziness: 0.4
 
 - type: reagent
@@ -2689,9 +2655,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
-      effects:
+    Digestion:
+      metabolites:
+        Ethanol: 0.3
 # WL android species start
+      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -2711,9 +2679,6 @@
           reagent: WhiteRussian
           min: 10
 # WL android species end
-    Digestion:
-      metabolites:
-        Ethanol: 0.3
 
 - type: reagent
   id: VodkaRedBool

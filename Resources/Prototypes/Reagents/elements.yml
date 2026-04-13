@@ -9,7 +9,7 @@
   boilingPoint: 2327.0
   meltingPoint: 660.0
   metabolisms:
-    Medicine:
+    Digestion:
       effects:
       - !type:HealthChange
         conditions:
@@ -29,7 +29,7 @@
   boilingPoint: 4200.0
   meltingPoint: 3550.0
   metabolisms:
-    Food:
+    Digestion:
       effects:
       - !type:SatiateHunger
         conditions:
@@ -135,7 +135,7 @@
   boilingPoint: 2700.0
   meltingPoint: 1064.76
   metabolisms:
-    Medicine:
+    Digestion:
       effects:
       - !type:HealthChange
         conditions:
@@ -143,8 +143,6 @@
           type: [ Golem ]
         damage:
           Brute: -3
-    Food:
-      effects:
       - !type:SatiateHunger
         conditions:
         - !type:MetabolizerTypeCondition
@@ -161,7 +159,7 @@
   boilingPoint: -253.0
   meltingPoint: -259.2
   metabolisms:
-    Food:
+    Digestion:
       effects:
       - !type:SatiateHunger
         conditions:
@@ -179,7 +177,7 @@
   boilingPoint: 184.3
   meltingPoint: 113.7
   metabolisms:
-    Medicine:
+    Digestion:
       effects:
       - !type:HealthChange
         conditions:
@@ -282,7 +280,7 @@
   meltingPoint: 65.5
   boilingPoint: 759.0
   metabolisms:
-    Medicine:
+    Digestion:
       effects:
       - !type:HealthChange
         conditions:
@@ -323,15 +321,13 @@
   meltingPoint: 700.0
   boilingPoint: 1737.0
   metabolisms:
-    Food:
+    Digestion:
       effects:
       - !type:SatiateHunger
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Golem ]
 # WL-Changes-start
-    Poison:
-      effects:
       - !type:HealthChange
         damage:
           types:
@@ -349,7 +345,7 @@
   boilingPoint: 3265.0
   meltingPoint: 1414.0
   metabolisms:
-    Food:
+    Digestion:
       effects:
       - !type:SatiateHunger
         conditions:
@@ -371,7 +367,7 @@
   boilingPoint: 2212.0
   meltingPoint: 960.5
   metabolisms:
-    Medicine:
+    Digestion:
       effects:
       - !type:HealthChange
         conditions:
@@ -379,8 +375,6 @@
           type: [ Golem ]
         damage:
           Brute: -3
-    Food:
-      effects:
       - !type:SatiateHunger
         conditions:
         - !type:MetabolizerTypeCondition
@@ -397,7 +391,7 @@
   boilingPoint: 445.0
   meltingPoint: 120.0
   metabolisms:
-    Medicine:
+    Digestion:
       effects:
       - !type:HealthChange
         conditions:
@@ -426,7 +420,7 @@
   meltingPoint: 97.8
   boilingPoint: 883.0
   metabolisms:
-    Medicine:
+    Digestion:
       effects:
       - !type:HealthChange
         conditions:
@@ -457,14 +451,12 @@
     probability: 0.2
     amount: 0.1
   metabolisms:
-    Food:
+    Digestion:
       effects:
       - !type:SatiateHunger
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Golem ]
-    Bloodstream:
-      effects:
       - !type:HealthChange
         damage:
           types:
@@ -481,7 +473,7 @@
   meltingPoint: 419.5
   boilingPoint: 907.0
   metabolisms:
-    Medicine:
+    Digestion:
       effects:
       - !type:HealthChange
         damage:

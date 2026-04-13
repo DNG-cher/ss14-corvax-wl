@@ -103,12 +103,6 @@
   - !type:FlammableTileReaction
     temperatureMultiplier: 1.5
   metabolisms:
-    Food:
-      effects:
-      - !type:SatiateHunger
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Golem ]
     Bloodstream:
       effects:
       - !type:HealthChange
@@ -129,6 +123,10 @@
         damage:
           types:
             Asphyxiation: 3
+      - !type:SatiateHunger
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Golem ]
 # WL species end
       - !type:AdjustReagent
         reagent: Inaprovaline
@@ -446,10 +444,9 @@
         damage:
           types:
             Cellular: -0.01
-          groups:
-            Brute: -0.02
-            Burn: -0.02
-            Toxin: -0.02
+          Brute: -0.02
+          Burn: -0.02
+          Toxin: -0.02
       # WL Cischi species end
       - !type:ModifyStatusEffect
         minScale: 1
