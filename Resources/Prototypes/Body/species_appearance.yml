@@ -4,6 +4,9 @@
   components:
   - type: Sprite
     layers:
+    - map: ["enum.BorgVisualLayers.Light"] # WL android race
+      shader: unshaded
+      visible: false
     # Torso
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
 
