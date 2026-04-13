@@ -23,14 +23,10 @@
   А в этом секторе Нанотразена вам могут попаться и такие виды
 
   <Box>
-  <GuideEntityEmbed Entity="MobAndroid" Caption="Андроид"/>
-  <GuideEntityEmbed Entity="MobFelinid" Caption="Феленид"/>
-  <GuideEntityEmbed Entity="MobHumanoidMurine" Caption="Мурин"/>
-  </Box>
-  <Box>
-  <GuideEntityEmbed Entity="MobGolem" Caption="Голем"/>
-  <GuideEntityEmbed Entity="MobAkula" Caption="Акула"/>
-  <GuideEntityEmbed Entity="MobCischi" Caption="Цисчи"/>
+  <GuideEntityEmbed Entity="AppearanceAndroid" Caption="Андроид"/>
+  <GuideEntityEmbed Entity="AppearanceFelinid" Caption="Феленид"/>
+  <GuideEntityEmbed Entity="AppearanceMurine" Caption="Мурин"/>
+  <GuideEntityEmbed Entity="AppearanceAkula" Caption="Акула"/>
   </Box>
 
 </Document>
