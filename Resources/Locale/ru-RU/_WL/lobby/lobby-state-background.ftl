@@ -1,8 +1,8 @@
 lobby-state-background-capoleon-title = Каполеон
-lobby-state-background-capoleon-artist = Sosiska
+lobby-state-background-capoleon-artist = MULTIFRUIT
 
 lobby-state-background-twix-title = Твикс
-lobby-state-background-twix-artist = Sosiska
+lobby-state-background-twix-artist = MULTIFRUIT
 
 lobby-state-background-kissme-title = Поцелуй меня
 lobby-state-background-kissme-artist = Sosiska
