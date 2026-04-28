@@ -6,7 +6,7 @@
 
 - type: lobbyBackground
   id: KissMe
-  background: /Textures/_Backmen/LobbyScreens/kissme.jpg
+  background: /Textures/_Backmen/LobbyScreens/kissme.png
   title: lobby-state-background-kissme-title
   artist: lobby-state-background-kissme-artist
 
